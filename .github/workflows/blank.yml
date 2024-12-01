@@ -1,0 +1,34 @@
+name: Release lwfhelm
+
+on:
+  push:
+    tags:
+      - 'v*'
+      
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.7.0  # 安装指定版本的 Helm
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.6.0
+        with:
+          charts_dir: ./hello-demo  # Helm Charts 的目录
+        env:
+          CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub Token 用于身份验证
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: hello-demo-${{ github.ref_name }}.tgz  # 托管的 Helm Chart 文件的路径
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub Token 用于身份验证
