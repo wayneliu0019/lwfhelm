@@ -28,7 +28,7 @@ jobs:
           CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub Token 用于身份验证
 
       - name: List generated files
-        run: ls ./
+        run: ls ./  && ls ./charts/
         
       - name: Create Release
         id: create_release
