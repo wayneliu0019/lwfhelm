@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  hello-demo:
+  - apiVersion: v2
+    appVersion: 1.17.0
+    created: "2024-12-01T07:03:57.883729547Z"
+    description: A Helm chart for Kubernetes
+    digest: ba9dd85c58be981266077ad5469100cdb91f8c241cbd30a09f7e65660b5cddce
+    name: hello-demo
+    type: application
+    urls:
+    - https://github.com/wayneliu0019/lwfhelm/releases/download/hello-demo-2.2/hello-demo-2.2.tgz
+    version: "2.2"
+generated: "2024-12-01T07:03:57.883733785Z"
