@@ -21,7 +21,7 @@ jobs:
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.6.0
         with:
-          charts_dir: ./  # Helm Charts 的目录
+          charts_dir: ./hello-demo  # Helm Charts 的目录
         env:
           CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub Token 用于身份验证
 
