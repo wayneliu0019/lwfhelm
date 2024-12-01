@@ -29,6 +29,6 @@ jobs:
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          files: ./hello-demo-${{ github.ref_name }}.tgz  # 托管的 Helm Chart 文件的路径
+          files: ./hello-demo/hello-demo-${{ github.ref_name }}.tgz  # 托管的 Helm Chart 文件的路径
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub Token 用于身份验证
