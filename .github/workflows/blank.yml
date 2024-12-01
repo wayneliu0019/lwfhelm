@@ -26,4 +26,9 @@ jobs:
           charts_dir: ./charts 
         env:
           CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub Token 用于身份验证
-        
+
+      - name: Publish Release
+        uses: ncipollo/release-action@v1
+        if: env.release_exists == 'false'
+        with:
+          artifacts: ./*.tgz
