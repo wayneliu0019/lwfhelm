@@ -13,6 +13,16 @@ entries:
     version: "2.2"
   - apiVersion: v2
     appVersion: v1.17.0
+    created: "2024-12-02T08:10:59.108922666Z"
+    description: A Helm chart for Kubernetes
+    digest: e92107fe51b9be0273315e814832224107ff17e009cb8a341b155609b829a091
+    name: hello-demo
+    type: application
+    urls:
+    - https://github.com/wayneliu0019/lwfhelm/releases/download/hello-demo-1.17.0/hello-demo-1.17.0.tgz
+    version: 1.17.0
+  - apiVersion: v2
+    appVersion: v1.17.0
     created: "2024-12-01T07:12:35.525263311Z"
     description: A Helm chart for Kubernetes
     digest: e5949b21c9c4d30f81e07525e133cba49249784968b8d3a3509599b300bb53f8
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/wayneliu0019/lwfhelm/releases/download/hello-demo-1.2.0/hello-demo-1.2.0.tgz
     version: 1.2.0
-generated: "2024-12-01T07:12:35.525275734Z"
+generated: "2024-12-02T08:10:59.108940018Z"
